@@ -4,7 +4,7 @@ body
     font-family:'Roboto Condensed';
     font-size:21px;
     padding:1% 5%;
-    background-image: url('img/pcb.jpg');
+    /*background-image: url('img/pcb.jpg');*/
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -93,4 +93,19 @@ div + p
 
     */
 }
-div
+.cite {
+    /*border: solid 8px;*/
+    border-left: solid 5px blue;
+    margin: 50px 150px 300px; /*Внешний отступ*/
+    /*margin: all-sides;
+      margin: top-bottom left-right;
+      margin: top left-right bottom;
+      margin: top right bottom left
+    */
+    padding: 20px; /*Внутренний отступ*/
+    /*padding: all-sides;
+      padding: top-bottom left-right;
+      padding: top left-right bottom;
+      padding: top right bottom left
+    */
+}
