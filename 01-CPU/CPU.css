@@ -47,8 +47,12 @@ a:hover
     background-color:black;
     color:white;
 }
-:target /*> span*/
+#home a:hover
 {
+    background:none;
+}
+:target /*> span*/
+{s
     background-color:limegreen;
 }
 :target + div
