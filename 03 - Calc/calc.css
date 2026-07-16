@@ -216,6 +216,7 @@ input:focus-visible
 {
     width:40px;
     height:32px;
+    color:darkblue;
 }
 
 .clear-buttons 
@@ -234,4 +235,8 @@ input:focus-visible
 .menu-bar, .calc-buttons button
 {
     font-size:11px;
+}
+.calc-buttons > .memory-button, .calc-buttons > .operation-button, .clear-buttons > button
+{
+    color:red;
 }
