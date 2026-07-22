@@ -8,16 +8,41 @@
 </head>
 <body>
     <h1>Forms and events</h1>
-    <h2>Factorial</h2>
-    <div class="task">
-        <label for="number">Введите целое число от 0 до 170:</label>
-        <input id="number" type="number" min="0" onchange="Factorial()" />
-        <button onclick="Factorial()">Вычислить</button>
-    </div>
-    <div id="factorial-result" class="result"></div>
-    <hr />
-    <h2>Power</h2>
-    <div class="task">
+    <details>
+        <summary>Simple tasks</summary>
+        <h2>Factorial</h2>
+        <div class="task">
+            <label for="number">Введите целое число от 0 до 170:</label>
+            <input id="number" type="number" min="0" onchange="Factorial()" />
+            <button onclick="Factorial()">Вычислить</button>
+        </div>
+        <div id="factorial-result" class="result"></div>
+        <hr />
+        <h2>Power</h2>
+        <div class="task">
+        </div>
+    </details>
+
+
+    <div class="images-and-colors">
+        <div class="upload-image">
+            <div class="image-container">
+                <img alt="Фото студента" id="image" />
+            </div>
+            <input type="file" id="image-file" onchange="setImage()" />
+        </div>
+
+        <div class="colors">
+            <div class="select-color">
+                <label for="background-color">Цвет фона</label>
+                <input type="color" id="background-color" value="white" oninput="SetBackgroundColor(event)"/>
+            </div>
+
+            <div class="select-color">
+                <label for="foreground-color">Цвет текста</label>
+                <input type="color" id="foreground-color" oninput="SetForegroundColor()"/>
+            </div>
+        </div>
 
     </div>
     <script src="forms_and_events.js"></script>
