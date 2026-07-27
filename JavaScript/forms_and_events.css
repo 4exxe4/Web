@@ -1,4 +1,31 @@
-﻿﻿input, div, button 
+﻿﻿.header 
+{
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header img 
+{
+    width: 24px;
+    height: 24px;
+}
+
+.dark 
+{
+    background-color: #323232;
+    color: #C8C8C8;
+}
+
+.light 
+{
+    background-color: white;
+    color: black;
+}
+
+/* /////////////////////////////////////////////////// */
+
+input, div, button 
 {
     font-size: 24px;
     width: 50%;
@@ -21,7 +48,7 @@ input
     max-width: 50%;
 }
 
-.pair
+.pair 
 {
     text-align: right;
 }
@@ -37,27 +64,31 @@ label
     width: 100%;
     height: 400px;
 }
-.images-and-colors
-{
-    width:100px;
-    display:flex;
-    justify-content:space-between;
-}
-.image-container
-{
-    border:solid 1px;
-    /*width:400px;
-    height:300px;*/
-}
-#image, .image-container
-{
-    width:400px;
-    height:300px;
-}
-.select-color
-{
-    display:flex;
-    justify-content:space-between;
+/* /////////////////////////////////////////////////////////////////////////// */
 
-    margin:12px;
+.images-and-colors 
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-container 
+{
+    border: solid 1px;
+    /*width:800px;
+	height:600px;*/
+}
+
+#image, .image-container 
+{
+    width: 400px;
+    height: 300px;
+}
+
+.select-color 
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 12px;
 }
