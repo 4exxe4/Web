@@ -63,6 +63,8 @@ function traceMouse(e)
 document.getElementById("switch-background").addEventListener("click", switchBackground);
 function switchBackground(e)
 {
+    document.body.style.backgroundColor = '';
+    document.body.style.color = '';
     document.body.className = document.body.className === "dark" ? "light" : "dark";
     //let skin = document.body.className;
     //let switchButton = document.getElementById("switch-background");
