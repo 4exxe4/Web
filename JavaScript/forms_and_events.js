@@ -85,10 +85,13 @@ function setDelay(e)
     console.table(document.body.style);
     console.table(document.getElementById('#switch-background').style);
 }
-function addLeadingZero(number) {
+/* ////////////////////////////////////////////////////////////////////// */
+function addLeadingZero(number)
+{
     return number < 10 ? "0" + `${number}` : `${number}`;
 }
-function tickTimer() {
+function tickTimer()
+{
     let date = new Date();
     document.getElementById("raw-date").innerHTML = date.toString();
 
@@ -108,9 +111,12 @@ function tickTimer() {
     setTimeout(tickTimer, 100);
 }
 tickTimer();
+
 /* ////////////////////////////////////////////////////////////////////// */
+
 document.getElementById('btn-start').addEventListener("click", startCountdownTimer);
-function startCountdownTimer() {
+function startCountdownTimer()
+{
     let targetDate = document.getElementById("target-date");
     let targetTime = document.getElementById("target-time");
     let btnStart = document.getElementById("btn-start");
@@ -124,7 +130,8 @@ function startCountdownTimer() {
         targetDate.disabled = targetTime.disabled = false;
     }
 }
-function tickCountdown() {
+function tickCountdown()
+{
     let now = new Date();
 
     let targetDateControl = document.getElementById("target-date");
@@ -134,7 +141,7 @@ function tickCountdown() {
     let targetTimeValue = targetTimeControl.valueAsDate;
 
     document.getElementById("timezone").innerHTML = now.getTimezoneOffset() / 60;
-    //??????????? ??????? ????:
+    //Выравниваем часовой пояс
     targetDateValue.setHours(targetDateValue.getHours() + targetDateValue.getTimezoneOffset() / 60);
     targetTimeValue.setHours(targetTimeValue.getHours() + targetDateValue.getTimezoneOffset() / 60);
 
