@@ -76,8 +76,29 @@ document.getElementById("switch-background-delay").addEventListener("change", se
 function setDelay(e)
 {
     let delay = e.target.value;
-    document.getElementById(`switch-background`).style.transition = document.body.style.transition =
+    //alert(`Delay" ${delay}`);
+    document.getElementById('switch-background').style.transition =
+        document.body.style.transition =
         `color ${delay}s, background-color ${delay}s, background-image ${delay}s`;
-    console.log(document.body.style);
-    console.log(document.getElementById('#switch-background').style);
+    console.table(document.body.style);
+    console.table(document.getElementById('#switch-background').style);
 }
+function addLeadingZero(number) {
+    return number < 10 ? "0" + `${number}` : `${number}`;
+}
+function tickTimer() {
+    let date = new Date();
+    document.getElementById("raw-date").innerHTML = date.toString();
+
+    document.getElementById("hours").innerHTML = addLeadingZero(date.getHours());
+    document.getElementById("minutes").innerHTML = addLeadingZero(date.getMinutes());
+    document.getElementById("seconds").innerHTML = addLeadingZero(date.getSeconds());
+
+    document.getElementById("years").innerHTML = addLeadingZero(date.getFullYear());
+    document.getElementById("months").innerHTML = addLeadingZero(date.getMonth() + 1);
+    document.getElementById("days").innerHTML = addLeadingZero(date.getDate());
+
+
+    setTimeout(tickTimer, 100);
+}
+tickTimer();

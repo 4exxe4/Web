@@ -17,7 +17,7 @@
     height: var(--bg-size);
     padding: 0 calc(var(--bg-size)/5);
     background-size: var(--bg-size) var(--bg-size);
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
 }
 
 .dark 
@@ -26,11 +26,11 @@
     color: #C8C8C8;
 }
 
-.dark #switch-background 
-{
-     background-image: url("sun.png");
-     filter: brightness(0) invert(1);
-}
+    .dark #switch-background 
+    {
+        background-image: url("sun.png");
+        filter: brightness(0) invert(1);
+    }
 
 .light 
 {
@@ -38,18 +38,20 @@
     color: black;
 }
 
-.light #switch-background 
-{
-    background-image: url("moon.png");
-}
+    .light #switch-background 
+    {
+        background-image: url("moon.png");
+    }
 
 /* /////////////////////////////////////////////////// */
 
-#switch-background-container, #switch-background-container > div
+#switch-background-container, #switch-background-container > div 
 {
-    display:flex;
-    padding:0 8px;
+    display: flex;
+    padding: 0 8px;
 }
+
+/* /////////////////////////////////////////////////// */
 
 input, div, button 
 {
@@ -117,4 +119,13 @@ label
     display: flex;
     justify-content: space-between;
     margin: 12px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */
+
+#clock, #clock div 
+{
+    width: 98%;
+    font-size: 48px;
+    text-align: center;
 }
